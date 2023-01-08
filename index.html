@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Travel Website</title>
+</head>
+
+<body>
+
+  <section>
+
+    <header>
+      <a href="#" class="logo">Travel</a>
+      <div class="menu">
+        <a href="#" onclick="toggleMenu()"><img src="assets/menu.png" alt="menu"></a>
+      </div>
+    </header>
+
+    <video src="assets/video.mp4" autoplay loop muted></video>
+
+    <aside>
+      <div class="menu">
+        <a href="#" onclick="toggleMenu()"><img src="assets/close.png" alt="close"></a>
+      </div>
+      <div class="box" id="box1">
+        <img src="assets/bali.jpeg" alt="bali">
+        <div class="texto">
+          <p><span>Bali</span> - Indonesia</p>
+        </div>
+      </div>
+      <div class="box" id="box2">
+        <img src="assets/flakstad.jpeg" alt="flakstad">
+        <div class="texto">
+          <p><span>flakstad</span> - Noruega</p>
+        </div>
+      </div>
+      <div class="box" id="box3">
+        <img src="assets/venecia.jpeg" alt="venecia">
+        <div class="texto">
+          <p><span>venecia</span> - Italia</p>
+        </div>
+      </div>
+    </aside>
+
+    <div class="contenido">
+      <h2>Travel</h2>
+      <p>Tu aventura comienza aqui y ahora</p>
+    </div>
+
+    <div class="cards">
+      <div class="card" id="card1">
+        <img src="assets/map.png" alt="map">
+        <p>Nuevos tours disponibles para Egipto</p>
+      </div>
+      <div class="card" id="card2">
+        <img src="assets/map.png" alt="map">
+        <p>Bali ha sido añadida al tour de Indonesia</p>
+      </div>
+      <div class="card" id="card3">
+        <img src="assets/map.png" alt="map">
+        <p>A partir de Febrero estaran disponibles los tours para Brasil</p>
+      </div>
+    </div>
+
+    <div class="redesSociales">
+      <ul>
+        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</body>
+
+</html>

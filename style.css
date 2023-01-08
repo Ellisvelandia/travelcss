@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  font-family: "Noto Serif", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section header .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+section header .menu {
+  width: 55px;
+  height: 55px;
+}
+
+section header .menu img {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section aside {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 350px;
+  height: 100%;
+  background: transparent;
+  transform: translateX(100%);
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+section aside.active {
+  transform: translateX(0%);
+}
+
+section aside .menu img {
+  position: absolute;
+  margin: 30px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  filter: invert(1);
+  z-index: 100;
+  cursor: pointer;
+}
+
+section aside .box {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+}
+
+section aside .box img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+  transition: 0.3s;
+}
+
+section aside .box .texto {
+  position: absolute;
+  bottom: 0;
+  margin: 30px;
+}
+
+section aside .box .texto p {
+  color: #fff;
+  font-weight: 700;
+  transform: translateX(-150%);
+  transition: 0.3s;
+}
+
+section aside .box .texto p span {
+  font-style: italic;
+}
+
+section aside .box:hover img {
+  filter: brightness(100%);
+  transform: scale(1.2);
+}
+
+section aside .box:hover .texto p {
+  transform: translateX(0px);
+}
+
+section .contenido {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+section .contenido h2 {
+  color: #fff;
+  font-size: 8em;
+  letter-spacing: 2px;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+section .contenido p {
+  color: #fff;
+  font-size: 1.2em;
+  letter-spacing: 3px;
+}
+
+section .cards {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section .cards .card {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 100px;
+  margin: 20px;
+}
+
+section .cards .card img {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  margin-right: 20px;
+}
+
+section .cards .card p {
+  color: #fff;
+  font-size: 0.9em;
+}
+
+section .redesSociales {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  padding-left: 100px;
+}
+
+section .redesSociales ul {
+  list-style: none;
+}
+
+section .redesSociales ul li {
+  margin-bottom: 20px;
+}
+
+section .redesSociales ul li a {
+  color: #fff;
+  font-size: 1.3em;
+  transition: 0.3s;
+}
+
+section .redesSociales ul li a:hover {
+  color: #b7b7b7;
+}
+
+@media only screen and (max-width: 1200px) {
+  section .cards .card {
+    width: 300px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  section .cards .card {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section header {
+    padding: 20px 80px;
+  }
+
+  section aside {
+    width: 100%;
+  }
+
+  section aside .box {
+    width: 100%;
+  }
+
+  section .contenido h2 {
+    font-size: 5em;
+  }
+
+  section .contenido p {
+    font-size: 0.9em;
+  }
+
+  section .cards .card {
+    width: 180px;
+  }
+
+  section .cards .card img {
+    width: 35px;
+    height: 35px;
+  }
+
+  section .cards .card p {
+    font-size: 0.8em;
+  }
+
+  section .redesSociales {
+    padding-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section header {
+    padding: 20px 50px;
+  }
+
+  section .contenido {
+    width: 200px;
+    text-align: center;
+  }
+
+  section .contenido h2 {
+    font-size: 3em;
+  }
+
+  section .contenido p {
+    font-size: 0.8em;
+  }
+
+  section .cards {
+    flex-direction: column;
+  }
+
+  section .cards .card {
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  section .redesSociales {
+    padding-left: 50px;
+  }
+}
